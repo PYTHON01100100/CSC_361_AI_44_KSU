@@ -1,0 +1,132 @@
+Students should first create a new directory for themselves in
+`src/students/'.  This directory name must be unique for each student,
+so it is suggested that students use their surname (assuming last
+names are unique among all students in the class).  For example, I
+would create the following directory:
+
+  $ cd src/students
+  $ mkdir studentA
+  $ cd studentA
+
+Inside this directory the student should create a new .java file for
+his/her othello-playing agent.  This filename does not need to be
+unique, although it is wise to give it a meaningful name.  For
+example:
+
+  $ vi AgentNameOthelloPlayer.java
+
+The combination of the directory name and the othello-playing agent's
+class name should be able to provide the professor with enough
+information to figure out who wrote the code.
+
+The first line of the java file should be a line defining the package
+in which this class will reside.  The package name *is not* arbitrary;
+it *must* be `student.' followed by the name of the directory you
+created above.  For example:
+
+  package students.studentA;
+
+It is then useful to import all of the classes that are related to the
+Othello game.  This is done with the following command:
+
+  import edu.ksu.csc.ai.othello.*;
+
+You will also need the `Date' class from `java.util' in order to
+handle the deadlines:
+
+  import java.util.Date;
+
+You can then create your class.  Each student's othello playing agent
+must be a class that extends off of OthelloPlayer.  The class name
+must be the same as the filename.  Since I named my file
+`AgentNameOthelloPlayer', I would create the class as follows:
+
+  public class AgentNameOthelloPlayer extends OthelloPlayer {
+    .
+    .
+    .
+  }
+
+For an example, see `src/students/example'.
+
+To compile your code, simply run `make' from the root directory.  If
+successful, it should create a new `.jar' file in the `lib' directory
+named after the directory you created above.
+
+  $ ls lib
+  example.jar  othello.jar
+  $ make
+  [... PRINTS OUT A LOT OF JUNK ...]
+  $ ls lib
+  example.jar  othello.jar  studentA.jar
+
+The reason why each agent is compiled to a separate JAR is so that
+students can optionally share their compiled players with each other
+without having to worry about divulging their code.  (Sure, there are
+Java bytecode decompilers, but I think it would take more effort to
+reverse engineer another student's agent than to program one's own
+agent in the first place!)  Feel free to share your agents with each
+other as JARs to have them play against each other.
+
+Note that running `make' will rebuild a lot of the code, not just your
+own.  This can often be time consuming and unnecessary.  To compile
+just your code, simply run:
+
+  $ make lib/studentA.jar
+
+where `studentA' is replaced with the name of the directory you
+created above.
+
+You can manually run your code with the following java command:
+
+  $ java -cp lib/othello.jar:lib/studentA.jar edu.ksu.csc.ai.othello.Othello
+
+A script is also provided for convenience called `othello':
+
+  $ ./othello
+
+This will run Othello with a graphical user interface.  If you are
+running the program "headless" (e.g., over SSH), a console-based user
+interface is also available.  This can be invoked using the command
+line option `-nw':
+
+  $ ./othello -nw
+
+You may also supply on the command line the list of players that are
+to participate in the game.  Players are specified by their class
+name.  For example, the following command will play a game between my
+agent and an agent that plays randomly:
+
+  $ ./othello edu.ksu.csc.ai.othello.RandomOthelloPlayer students.studentA.EvansOthelloPlayer
+
+There is also a HumanOthelloPlayer that will allow the user to control
+one of the agents through the user interface.  To play against one's
+own agent, one could run:
+
+  $ ./othello edu.ksu.csc.ai.othello.HumanOthelloPlayer students.studentA.EvansOthelloPlayer
+
+If the players are not provided on the command line the user interface
+will display a list of all of the possible player classes it found in
+the classpath.
+
+For a complete list of command line options, simply run
+
+  $ ./othello -nw
+
+For those who prefer an IDE over a good old text editor, an Eclipse
+project is included in this directory.  Simply open Eclipse and select
+File -> Import -> Existing Projects into Workspeace and select this
+directory as the root directory.  Note, however, that I have not yet
+set up the Eclipse project to correctly build separate JARs for the
+Othello classes and individual student's players.  Therefore, if you
+would like to share your compiled othello player with a classmate, it
+is easiest to build its JAR using the Makefile.
+
+A JavaDoc is automatically built each time your code is recompiled.
+To manually force a rebuild of the JavaDoc, run:
+
+  $ make javadoc
+
+The JavaDoc is built in the `doc' directory.
+
+The remainder of the documentation is located within the JavaDoc.

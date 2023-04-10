@@ -1,0 +1,5 @@
+for i in lib/*.jar
+do
+  CP="${i}:${CP}"
+done
+CLASSPATH=${CP} java -Xmx512M edu.ksu.csc.ai.othello.Othello $@
