@@ -8,6 +8,7 @@
  hsoub : https://academy.hsoub.com/files/17-%D9%85%D8%AF%D8%AE%D9%84-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%88%D8%AA%D8%B9%D9%84%D9%85-%D8%A7%D9%84%D8%A2%D9%84%D8%A9/
  hsoub : https://academy.hsoub.com/files/29-%D8%B9%D8%B4%D8%B1%D8%A9-%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9-%D8%B9%D9%85%D9%84%D9%8A%D8%A9-%D8%B9%D9%86-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A/
 ------------------------
+#
 Ahmed Karam : https://youtube.com/playlist?list=PLYkwEr8Tg5imuvN2M5WfNSBSg_CGaBxGH&feature=shared
 Ahmed : https://youtube.com/playlist?list=PLcAf0BNJq_vd3NH206ZifB4M2P-5C_sUG&feature=shared 
 Ahmed Yousry : https://youtube.com/playlist?list=PLPBnj6azlABatXqkOgE4-Suu2ucfax42F&feature=shared
@@ -26,3 +27,4 @@ AlgoSchool: https://youtube.com/playlist?list=PLog16ArGOo_fq34-i-Z3JPZEsq7GRQoSj
 daniel ashraf : https://youtube.com/playlist?list=PL6UaoAQ6Yt-KBfJwA7Yp8_WGbweu6BZ7Y&feature=shared
 Safwa FCDS : https://youtube.com/playlist?list=PLNVsyemi1cQyhIJFdJkd6CJo52y5MJeC-&feature=shared
 CS361 Intro. to AI [in Arabic] مقدمة للذكاء الاصطناعي باللغة العربية : https://youtube.com/playlist?list=PLsnvpvHuTUbAZr0n65TgytBK6bHdT33A7&feature=shared
+Hazem Ali : https://youtube.com/playlist?list=PLCwJ-zYcMM93oaF6ToBx81fJgeekVws7K&feature=shared
